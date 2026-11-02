@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Master Plan & Gallery — Vardam's GOA3, Malvan</title>
+  <meta name="description" content="Study the Vardam's GOA3 master plan and browse the farmhouse gallery — entrance gate, exteriors, interiors, 3D floor plans and landscaping in Malvan, Konkan." />
+  <meta property="og:title" content="Master Plan & Gallery — Vardam's GOA3" />
+  <meta property="og:description" content="Zoom into the project master plan and explore the farmhouse design gallery." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero" data-testid="master-plan-hero">
+      <div class="page-hero-media" data-parallax="0.16">
+        <img id="mp-hero-img" src="" alt="Aerial view of the Vardam's GOA3 farmhouse development" />
+      </div>
+      <div class="container page-hero-inner">
+        <span class="eyebrow" data-reveal>Master Plan &amp; Gallery</span>
+        <h1 class="display h1 display--light mask-parent">
+          <span class="mask-line" style="--d:.15s"><span>The estate,</span></span>
+          <span class="mask-line" style="--d:.3s"><span><em>from above.</em></span></span>
+        </h1>
+        <p class="lede" data-reveal style="--d:.5s">Zoom into the development layout, then wander through the gallery — entrance, exteriors, interiors, floor plans and gardens.</p>
+      </div>
+    </section>
+
+    <!-- SECTION A: MASTER PLAN -->
+    <section class="section section--white" data-testid="master-plan-section">
+      <div class="container zoomer-wrap">
+        <div>
+          <span class="eyebrow" data-reveal>Section A · Project Master Plan</span>
+          <h2 class="display h2" data-reveal style="--d:.1s">Read the land like <em>a map.</em></h2>
+          <p class="lede" data-reveal style="--d:.2s" style="margin-top:18px">The 3D aerial master plan shows the complete development — its entrance, internal road spine and plot clusters set within the greenery of Malvan.</p>
+          <div class="zoomer" data-zoomer data-testid="master-plan-zoomer" data-reveal style="--d:.25s">
+            <img id="zoomer-img" src="" alt="Interactive 3D master plan of Vardam's GOA3 — scroll to zoom, drag to pan" draggable="false" />
+            <span class="zoomer-hint">Scroll to zoom · Drag to pan</span>
+            <div class="zoomer-tools" data-zoomer-tools>
+              <button data-zoom-in data-testid="zoom-in-button" aria-label="Zoom in"><span data-icon="zoomin"></span></button>
+              <button data-zoom-out data-testid="zoom-out-button" aria-label="Zoom out"><span data-icon="zoomout"></span></button>
+              <button data-zoom-reset data-testid="zoom-reset-button" aria-label="Reset zoom"><span data-icon="reset"></span></button>
+              <button data-zoom-full data-testid="zoom-fullscreen-button" aria-label="Open fullscreen"><span data-icon="expand"></span></button>
+            </div>
+          </div>
+        </div>
+        <div class="mp-notes">
+          <span class="eyebrow" data-reveal>Reading the Layout</span>
+          <ul data-reveal style="--d:.15s">
+            <li><b>I.</b> The entrance court anchors the estate's southern approach.</li>
+            <li><b>II.</b> A shaded internal spine road connects each plot cluster.</li>
+            <li><b>III.</b> Creek-facing plots line the estate's eastern edge.</li>
+            <li><b>IV.</b> Grove plots sit within the central green belt.</li>
+            <li><b>V.</b> Hill-view plots rise along the northern contour.</li>
+          </ul>
+          <p class="small" data-reveal style="--d:.25s">Layout shown is the current indicative plan. Exact plot numbers, dimensions and boundaries are confirmed during your enquiry and site visit.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION B: GALLERY -->
+    <section class="section" id="gallery" data-testid="gallery-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-reveal>Section B · Farmhouse Gallery</span>
+          <h2 class="display h2" data-reveal style="--d:.1s">The project,<br /><em>in pictures.</em></h2>
+        </div>
+        <div class="gallery-filters" data-reveal>
+          <button class="chip is-active" data-filter="all" aria-pressed="true" data-testid="filter-all">All</button>
+          <button class="chip" data-filter="plan" aria-pressed="false" data-testid="filter-plan">Master Plan</button>
+          <button class="chip" data-filter="gate" aria-pressed="false" data-testid="filter-gate">Entrance Gate</button>
+          <button class="chip" data-filter="exterior" aria-pressed="false" data-testid="filter-exterior">Exteriors</button>
+          <button class="chip" data-filter="interior" aria-pressed="false" data-testid="filter-interior">Interiors</button>
+          <button class="chip" data-filter="floorplan" aria-pressed="false" data-testid="filter-floorplan">3D Floor Plans</button>
+          <button class="chip" data-filter="landscape" aria-pressed="false" data-testid="filter-landscape">Landscaping</button>
+        </div>
+        <div class="bento" data-gallery id="gallery-grid" data-testid="gallery-grid"></div>
+      </div>
+    </section>
+
+    <!-- SECTION C: LIFESTYLE -->
+    <section class="section section--forest" data-testid="lifestyle-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-reveal>Section C · Project Lifestyle</span>
+          <h2 class="display h2" data-reveal style="--d:.1s">The Konkan,<br /><em>at your doorstep.</em></h2>
+        </div>
+        <div class="cards-3" id="lifestyle-grid"></div>
+        <p class="lede" style="margin-top:44px;max-width:640px" data-reveal>Weekends here mean village markets in Malvan, quiet backwaters and long garden lunches. Amenities and landscaping grow with the estate — what exists today and what is planned is always shared transparently on enquiry.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/config.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js" defer></script>
+  <script src="assets/js/shared.js" defer></script>
+  <script src="assets/js/home.js" defer></script>
+  <script src="assets/js/gallery.js" defer></script>
+  <script src="assets/js/zoomer.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var G = window.GOA3, I = G.images;
+      document.getElementById("mp-hero-img").src = "assets/img/konkan-hills.jpg";
+      document.getElementById("zoomer-img").src = I.masterPlan;
+
+      var items = [
+        { cat: "plan", src: I.masterPlan, cap: "3D Master Plan — Vardam's GOA3 estate layout", cls: "bento-item--w bento-item--t" },
+        { cat: "gate", src: I.gate[0], cap: "Vardam's GOA3 — Entrance Gate", cls: "" },
+        { cat: "exterior", src: I.exteriors[1], cap: "Farmhouse Exterior — modern tropical facade", cls: "" },
+        { cat: "interior", src: I.interiors[0], cap: "Farmhouse Interior — living room", cls: "" },
+        { cat: "floorplan", src: I.plans[0], cap: "3D Floor Plan — courtyard residence", cls: "" },
+        { cat: "landscape", src: I.landscape[0], cap: "Landscaping — tropical garden pathway", cls: "" },
+        { cat: "exterior", src: I.exteriors[2], cap: "Farmhouse Exterior — pool court aerial", cls: "" },
+        { cat: "interior", src: I.interiors[1], cap: "Farmhouse Interior — lounge with art wall", cls: "" },
+        { cat: "gate", src: I.gate[1], cap: "Estate Arrival — planted entry court", cls: "" },
+        { cat: "floorplan", src: I.plans[1], cap: "3D Floor Plan — open-plan living level", cls: "" },
+        { cat: "landscape", src: I.landscape[1], cap: "Landscaping — palm-lined estate path", cls: "" },
+        { cat: "interior", src: I.interiors[2], cap: "Farmhouse Interior — veranda pool view", cls: "" },
+        { cat: "plan", src: I.aerial[1], cap: "Estate Context — green fields of Malvan", cls: "bento-item--w" },
+        { cat: "exterior", src: I.exteriors[3], cap: "Farmhouse Exterior — grove-side retreat", cls: "" },
+        { cat: "interior", src: I.interiors[3], cap: "Farmhouse Interior — master bedroom", cls: "" },
+        { cat: "landscape", src: I.landscape[2], cap: "Landscaping — flowering garden court", cls: "" },
+        { cat: "floorplan", src: I.plans[2], cap: "3D Floor Plan — architectural layout study", cls: "" }
+      ];
+      document.getElementById("gallery-grid").innerHTML = items.map(function (g, i) {
+        return '<figure class="bento-item ' + g.cls + '" data-cat="' + g.cat + '" data-full="' + g.src + '" data-caption="' + g.cap + '" data-testid="gallery-item-' + i + '" tabindex="0" role="button" aria-label="Open image: ' + g.cap + '">' +
+          '<img src="' + g.src + '" alt="' + g.cap + '" loading="lazy">' +
+          "<figcaption>" + g.cap + "</figcaption></figure>";
+      }).join("");
+
+      document.getElementById("lifestyle-grid").innerHTML = I.scenery.map(function (s, i) {
+        return '<article class="p-card" data-reveal style="--d:' + i * 0.12 + 's">' +
+          '<div class="p-card-media"><img src="' + s + '" alt="Konkan scenery near Malvan" loading="lazy"></div>' +
+          '<div class="p-card-body"><h3>' + ["Backwater Mornings", "River & Grove", "Slow Evenings"][i] + "</h3>" +
+          '<p class="small">' + [
+            "Mist on the water and the first ferry of the day — the rhythm Malvan wakes up to.",
+            "Coconut groves and quiet river bends, minutes from your farmhouse gate.",
+            "Long veranda evenings as the estate settles into the sounds of the night."
+          ][i] + "</p></div></article>";
+      }).join("");
+
+      document.querySelectorAll("[data-icon]").forEach(function (el) {
+        el.innerHTML = window.goa3Icon(el.getAttribute("data-icon"));
+      });
+      window.goa3Observe(document);
+    });
+  </script>
+</body>
+</html>

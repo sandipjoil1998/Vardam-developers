@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plots & Farmhouse Designs — Vardam's GOA3, Malvan</title>
+  <meta name="description" content="Explore farmhouse plots and custom farmhouse architectural designs at Vardam's GOA3, Malvan, Konkan. Enquire on WhatsApp for pricing and availability." />
+  <meta property="og:title" content="Farmhouse Plots & Designs — Vardam's GOA3" />
+  <meta property="og:description" content="Premium farmhouse plots and bespoke farmhouse designs in Malvan, Konkan. Pricing on enquiry." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero" data-testid="plots-hero">
+      <div class="page-hero-media" data-parallax="0.16">
+        <img id="plots-hero-img" src="" alt="Modern farmhouse exterior among tropical greenery" />
+      </div>
+      <div class="container page-hero-inner">
+        <span class="eyebrow" data-reveal>Plots &amp; Farmhouse Designs</span>
+        <h1 class="display h1 display--light mask-parent">
+          <span class="mask-line" style="--d:.15s"><span>Choose the land.</span></span>
+          <span class="mask-line" style="--d:.3s"><span><em>Choose the life.</em></span></span>
+        </h1>
+        <p class="lede" data-reveal style="--d:.5s">Farmhouse plots within the estate, and a catalogue of farmhouse designs we can build on them — pricing and availability shared personally on enquiry.</p>
+      </div>
+    </section>
+
+    <!-- SECTION A: PLOTS -->
+    <section class="section section--white" id="plots" data-testid="plots-section">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <span class="eyebrow" data-reveal>Section A · Farmhouse Plots</span>
+            <h2 class="display h2" data-reveal style="--d:.1s">Plots across <em>three zones.</em></h2>
+            <p class="lede" data-reveal style="--d:.2s">Creek-facing, grove and hill-view clusters — each plot planned for privacy, breeze and a home that opens to its garden.</p>
+          </div>
+          <span class="note-chip" data-testid="sample-data-note" data-reveal style="--d:.2s"><span data-icon="info"></span>Sample inventory for demonstration — final plot list, dimensions &amp; availability shared on enquiry.</span>
+        </div>
+        <div class="cards-3" data-plots></div>
+      </div>
+    </section>
+
+    <!-- SECTION B: DESIGNS -->
+    <section class="section" id="designs" data-testid="designs-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-reveal>Section B · Farmhouse Designs</span>
+          <h2 class="display h2" data-reveal style="--d:.1s">A catalogue of homes,<br /><em>ready to customise.</em></h2>
+          <p class="lede" data-reveal style="--d:.2s">Every design can be adapted to your plot and brief. Open any residence for its exterior views, 3D floor plan, interiors and specifications.</p>
+        </div>
+        <div class="cards-3" data-design-catalogue></div>
+        <p class="small" style="margin-top:26px" data-reveal>Renders, plans and specifications shown are illustrative concepts. Final architectural drawings are prepared for your plot and confirmed before construction.</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--forest" data-testid="plots-cta-section">
+      <div class="container cta-band">
+        <span class="eyebrow" data-reveal style="justify-content:center">Still Deciding?</span>
+        <h2 class="display h2 display--light" data-reveal style="--d:.1s">Let's walk the estate <em>together.</em></h2>
+        <p class="lede" data-reveal style="--d:.2s">Tell us your budget and the kind of farmhouse you're imagining — we'll shortlist plots and designs that fit, and arrange a site visit in Malvan.</p>
+        <div class="hero-cta" data-reveal style="--d:.3s">
+          <a class="btn btn-gold" id="plots-wa" href="#" target="_blank" rel="noopener" data-testid="plots-whatsapp-button">WhatsApp Us</a>
+          <button class="btn btn-ghost" data-callback data-testid="plots-callback-button">Request a Callback</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/config.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js" defer></script>
+  <script src="assets/js/shared.js" defer></script>
+  <script src="assets/js/home.js" defer></script>
+  <script src="assets/js/plots.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var G = window.GOA3;
+      document.getElementById("plots-hero-img").src = G.images.masterPlan;
+      document.getElementById("plots-wa").href = G.wa();
+      document.querySelectorAll("[data-icon]").forEach(function (el) {
+        el.innerHTML = window.goa3Icon(el.getAttribute("data-icon"));
+      });
+    });
+  </script>
+</body>
+</html>

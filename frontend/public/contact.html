@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Enquiry — Vardam's GOA3, Malvan, Konkan</title>
+  <meta name="description" content="Enquire about farmhouse plots and farmhouse construction at Vardam's GOA3, Malvan, Konkan. Call, WhatsApp or send an enquiry — pricing and availability shared personally." />
+  <meta property="og:title" content="Contact Vardam's GOA3 — Farmhouse Enquiries" />
+  <meta property="og:description" content="Reach the Vardam's GOA3 team for farmhouse plots and construction in Malvan, Konkan." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero" data-testid="contact-hero">
+      <div class="page-hero-media" data-parallax="0.16">
+        <img id="contact-hero-img" src="" alt="Serene Konkan backwaters near Malvan" />
+      </div>
+      <div class="container page-hero-inner">
+        <span class="eyebrow" data-reveal>Contact &amp; Enquiry</span>
+        <h1 class="display h1 display--light mask-parent">
+          <span class="mask-line" style="--d:.15s"><span>Start the</span></span>
+          <span class="mask-line" style="--d:.3s"><span><em>conversation.</em></span></span>
+        </h1>
+        <p class="lede" data-reveal style="--d:.5s">Plots, pricing, designs or a site visit in Malvan — send an enquiry and our team will respond personally.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT + FORM -->
+    <section class="section section--white" data-testid="contact-section">
+      <div class="container contact-grid">
+        <div>
+          <span class="eyebrow" data-reveal>Reach Us</span>
+          <h2 class="display h2" data-reveal style="--d:.1s">We answer<br /><em>personally.</em></h2>
+          <p class="lede" data-reveal style="--d:.2s" style="margin:18px 0 30px">No call centres, no queues. Every enquiry reaches the team building Vardam's GOA3.</p>
+          <div class="info-cards">
+            <a class="info-card" id="wa-card" href="#" target="_blank" rel="noopener" data-testid="contact-whatsapp-card" data-reveal>
+              <span data-icon="phone"></span>
+              <div><b>WhatsApp</b><span id="wa-number"></span><small>Fastest response — pricing &amp; availability</small></div>
+            </a>
+            <a class="info-card" id="tel-card" href="#" data-testid="contact-call-card" data-reveal style="--d:.08s">
+              <span data-icon="phone"></span>
+              <div><b>Call Us</b><span id="tel-number"></span><small>Tap to call from your mobile</small></div>
+            </a>
+            <a class="info-card" id="mail-card" href="#" data-testid="contact-email-card" data-reveal style="--d:.16s">
+              <span data-icon="mail"></span>
+              <div><b>Email</b><span id="mail-address"></span><small>Detailed enquiries &amp; documents</small></div>
+            </a>
+            <div class="info-card" data-testid="contact-location-card" data-reveal style="--d:.24s">
+              <span data-icon="pin"></span>
+              <div><b>Project Location</b><span id="location-text"></span><small>Site visits arranged on request</small></div>
+            </div>
+          </div>
+        </div>
+
+        <form class="form-card" data-enquiry-form data-testid="enquiry-form" novalidate>
+          <div>
+            <span class="eyebrow">Enquiry Form</span>
+            <h3 class="display h3" style="margin-top:14px">Tell us what you're dreaming of.</h3>
+            <p class="small" style="margin-top:8px">On submit, your enquiry opens in WhatsApp — fully pre-filled, nothing stored.</p>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-name">Full Name <i>*</i></label>
+              <input id="f-name" name="name" type="text" placeholder="Your full name" data-testid="enquiry-name-input" autocomplete="name" />
+              <span class="err">Please enter your full name.</span>
+            </div>
+            <div class="field">
+              <label for="f-phone">Mobile Number <i>*</i></label>
+              <input id="f-phone" name="phone" type="tel" placeholder="10-digit mobile number" data-testid="enquiry-phone-input" autocomplete="tel" />
+              <span class="err">Please enter a valid mobile number.</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-email">Email Address</label>
+              <input id="f-email" name="email" type="email" placeholder="you@example.com (optional)" data-testid="enquiry-email-input" autocomplete="email" />
+              <span class="err">Please enter a valid email address.</span>
+            </div>
+            <div class="field">
+              <label for="f-type">Enquiry Type <i>*</i></label>
+              <select id="f-type" name="type" data-testid="enquiry-type-select">
+                <option value="">Select enquiry type</option>
+                <option>Farmhouse Plot</option>
+                <option>Farmhouse Construction</option>
+                <option>Farmhouse Design</option>
+                <option>General Enquiry</option>
+              </select>
+              <span class="err">Please select an enquiry type.</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="f-interest">Interested Plot or Design</label>
+              <select id="f-interest" name="interest" data-testid="enquiry-interest-select"></select>
+            </div>
+            <div class="field">
+              <label for="f-budget">Approximate Budget</label>
+              <select id="f-budget" name="budget" data-testid="enquiry-budget-select">
+                <option value="">Prefer not to say</option>
+                <option>Under ₹50 Lakhs</option>
+                <option>₹50 Lakhs – ₹1 Crore</option>
+                <option>₹1 Crore – ₹2 Crores</option>
+                <option>Above ₹2 Crores</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" placeholder="Anything you'd like us to know — timeline, family size, questions…" data-testid="enquiry-message-input"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold" style="justify-self:start" data-testid="enquiry-submit-button">Submit Enquiry</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- LOCATION / MAP -->
+    <section class="section" data-testid="location-section">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <span class="eyebrow" data-reveal>Project Location</span>
+            <h2 class="display h2" data-reveal style="--d:.1s">Find us in <em>Malvan.</em></h2>
+            <p class="lede" data-reveal style="--d:.2s">The estate lies in the Malvan region of the Konkan, Sindhudurg district — famed for its coastline, cuisine and coconut groves. The exact project address and directions are shared when you plan your visit.</p>
+          </div>
+          <a class="btn btn-outline" id="maps-link" href="#" target="_blank" rel="noopener" data-testid="open-in-maps-button" data-reveal style="--d:.2s">Open in Google Maps</a>
+        </div>
+        <div class="map-wrap" data-reveal>
+          <iframe id="map-iframe" title="Map of Malvan, Konkan, Maharashtra — project region (indicative)" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-testid="map-embed"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/config.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js" defer></script>
+  <script src="assets/js/shared.js" defer></script>
+  <script src="assets/js/contact.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var G = window.GOA3, B = G.brand;
+      document.getElementById("contact-hero-img").src = "assets/img/meadow-sunset.jpg";
+      document.getElementById("wa-card").href = G.wa();
+      document.getElementById("wa-number").textContent = "+" + B.whatsapp.replace(/^91/, "91 ");
+      document.getElementById("tel-card").href = "tel:" + B.phone;
+      document.getElementById("tel-number").textContent = B.phoneDisplay;
+      document.getElementById("mail-card").href = "mailto:" + B.email;
+      document.getElementById("mail-address").textContent = B.email;
+      document.getElementById("location-text").textContent = B.location;
+      document.getElementById("map-iframe").src = B.mapEmbed;
+      document.getElementById("maps-link").href = "https://www.google.com/maps?q=" + encodeURIComponent(B.location);
+      document.querySelectorAll("[data-icon]").forEach(function (el) {
+        el.innerHTML = window.goa3Icon(el.getAttribute("data-icon"));
+      });
+    });
+  </script>
+</body>
+</html>

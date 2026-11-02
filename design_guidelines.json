@@ -1,0 +1,236 @@
+{
+  "project_name": "Vardam's GOA3",
+  "project_type": "marketing_site",
+  "theme": "light",
+  "design_philosophy": "Premium, visually stunning luxury farmhouse lifestyle. Immersive editorial style balancing nature (Konkan backwaters) with elite architectural precision. Cinematic imagery, generous spacing, and fluid motion.",
+  "typography": {
+    "headings": {
+      "family": "Cormorant Garamond",
+      "style": "Premium Serif, elegant and high-contrast",
+      "weights": ["400", "600"],
+      "usage": "Use for all H1, H2, H3 headings. Ensure tight letter spacing (tracking-tight) for large headers.",
+      "scales": {
+        "h1": "text-5xl md:text-6xl tracking-tight leading-tight",
+        "h2": "text-4xl md:text-5xl tracking-tight leading-snug",
+        "h3": "text-2xl md:text-3xl tracking-normal leading-snug"
+      }
+    },
+    "body": {
+      "family": "Manrope",
+      "style": "Modern Sans-serif, clean and legible",
+      "weights": ["300", "400", "500"],
+      "usage": "Use for body text, buttons, forms, and functional UI.",
+      "scales": {
+        "base": "text-base leading-relaxed",
+        "small": "text-sm leading-normal",
+        "labels": "text-xs tracking-[0.2em] uppercase font-medium"
+      }
+    }
+  },
+  "colors": {
+    "primary": {
+      "name": "Forest Green",
+      "value": "#1A3626",
+      "usage": "Brand anchor. Use for footer backgrounds, primary buttons, strong text contrast on light backgrounds."
+    },
+    "secondary": {
+      "name": "Champagne Gold",
+      "value": "#D4AF37",
+      "usage": "Luxury accent. Use for subtle borders, highlight text, active states, and decorative SVG lines."
+    },
+    "backgrounds": {
+      "ivory": "#FAF9F6",
+      "white": "#FFFFFF",
+      "usage": "Primary page backgrounds. Use Ivory for warm sections (About, Lifestyle) and Pure White for crisp gallery/plot displays."
+    },
+    "text": {
+      "dark": "#0F1A15",
+      "muted": "#4A5D53"
+    },
+    "rules": [
+      "NO cheap gradients. Avoid mixing green and gold in a flat gradient.",
+      "Never use pure black #000000; use the dark text color #0F1A15.",
+      "Ensure minimum 4.5:1 contrast for normal text and 3:1 for large text."
+    ]
+  },
+  "visual_enhancers": {
+    "surfaces": "Use 'Glassmorphism (The Crystal Variant)' for the sticky header (e.g., backdrop-blur-xl bg-white/80 border-b border-black/5). No fully transparent headers if content scrolls beneath.",
+    "borders": "Delicate 1px borders in Champagne Gold (#D4AF37/30) or soft gray (black/5) to separate cards without heavy shadows.",
+    "shadows": "Soft, diffuse ambient shadows (e.g., shadow-[0_8px_32px_rgba(26,54,38,0.08)]) on hover for cards. Default state should rely on borders or very subtle lift.",
+    "overlays": "Hero image overlay must not exceed bg-black/40. If more contrast is needed for text, use a soft gradient from black/60 to transparent."
+  },
+  "grids_and_layouts": {
+    "spacing_scale": "Use 2-3x more spacing. Apply py-24 or py-32 for section padding. Apply gap-8 to gap-16 in grids.",
+    "bento_grid": "For the gallery and master plan sections, use asymmetrical bento grids (e.g., col-span-8 row-span-2 for hero images, mixed with col-span-4 supporting images).",
+    "cards": "Farmhouse design cards should have generous internal padding (p-8), image on top (max-h-64 object-cover), and text content below left-aligned.",
+    "alignment": "Optical alignment over geometrical. Left-align body paragraphs and dense text. Center-align hero text only if it balances the architectural imagery."
+  },
+  "motion_and_interactions": {
+    "scrolling": "MANDATORY: Use `lenis` for smooth momentum scrolling.",
+    "scroll_reveal": "Use `framer-motion` for line-by-line masked text reveals in the Hero section and staggered fade-ups for grid items.",
+    "hover_states": "Images inside cards should scale slightly on hover (scale-105) with a smooth transition (duration-500 ease-out).",
+    "buttons": "Primary CTA buttons (WhatsApp Enquiry) should have an elegant background fill sweep or subtle lift (-translate-y-1) on hover."
+  },
+  "components_strategy": {
+    "html_tailwind": "Use custom HTML/Tailwind for all main layout structures, Hero sections, and Bento grids.",
+    "shadcn": "Use Shadcn components (customized to remove generic styling) for forms, inputs, and the gallery lightbox (Dialog). Override border radii to 0px or 4px for a sharper, premium look.",
+    "navigation": "Sticky header with glassmorphism. Visible navigation links on desktop, hamburger menu ONLY for mobile.",
+    "whatsapp_integration": "A floating WhatsApp button fixed to the bottom-right on all pages. Form submissions should format a WhatsApp message string and open it in a new tab using `window.open`."
+  },
+  "accessibility": {
+    "testing": "All interactive and key informational elements MUST include a `data-testid` attribute (e.g., data-testid=\"enquire-whatsapp-button\").",
+    "contrast": "Meet APCA/WCAG contrast ratios.",
+    "motion": "Respect prefers-reduced-motion media query."
+  },
+  "media": {
+    "rules": "All images must be visually immersive and contextually relevant. No placeholder text images.",
+    "image_urls": {
+      "hero_and_exteriors": [
+        {
+          "url": "https://images.unsplash.com/photo-1561831710-3a8abd9657cf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjB0cm9waWNhbCUyMGZhcm1ob3VzZSUyMGV4dGVyaW9yfGVufDB8fHx8MTc5MzYxMjQ3Mnww&ixlib=rb-4.1.0&q=85",
+          "description": "White luxury farmhouse exterior near palm trees",
+          "category": "hero_background"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1771366260867-7e07094579d7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjB0cm9waWNhbCUyMGZhcm1ob3VzZSUyMGV4dGVyaW9yfGVufDB8fHx8MTc5MzYxMjQ3Mnww&ixlib=rb-4.1.0&q=85",
+          "description": "Modern white farmhouse with glass doors",
+          "category": "farmhouse_designs"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1787237819544-39f0d4dac2b1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjB0cm9waWNhbCUyMGZhcm1ob3VzZSUyMGV4dGVyaW9yfGVufDB8fHx8MTc5MzYxMjU3Mnww&ixlib=rb-4.1.0&q=85",
+          "description": "An aerial view of a house with a swimming pool in a grassy yard",
+          "category": "farmhouse_designs"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1775716215749-f2e0543ebf6e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjB0cm9waWNhbCUyMGZhcm1ob3VzZSUyMGV4dGVyaW9yfGVufDB8fHx8MTc5MzYxMjU3Mnww&ixlib=rb-4.1.0&q=85",
+          "description": "A sunlit farm with a fence and trees",
+          "category": "farmhouse_designs"
+        }
+      ],
+      "gated_entrance": [
+        {
+          "url": "https://images.unsplash.com/photo-1775112077888-8fa36e9bbc51?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwxfHxnYXRlZCUyMGNvbW11bml0eSUyMGVudHJhbmNlJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc5MzYxMjQ3Mnww&ixlib=rb-4.1.0&q=85",
+          "description": "Premium gated community entrance",
+          "category": "gallery_entrance"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1775733924258-5363323b3ab8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxnYXRlZCUyMGNvbW11bml0eSUyMGVudHJhbmNlJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc5MzYxMjU3Mnww&ixlib=rb-4.1.0&q=85",
+          "description": "Modern residential building with balconies and greenery",
+          "category": "gallery_entrance"
+        }
+      ],
+      "aerial_master_plan": [
+        {
+          "url": "https://images.unsplash.com/photo-1516822277566-bb38424a2b77?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxhZXJpYWwlMjBsYW5kc2NhcGUlMjBwbG90cyUyMG5hdHVyZXxlbnwwfHx8fDE3OTM2MTI0NzJ8MA&ixlib=rb-4.1.0&q=85",
+          "description": "Aerial view of plotted land",
+          "category": "master_plan_preview"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1556490496-45afc7b8b8e5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxhZXJpYWwlMjBsYW5kc2NhcGUlMjBwbG90JTIwbmF0dXJlfGVufDB8fHx8MTc5MzYxMjU3Mnww&ixlib=rb-4.1.0&q=85",
+          "description": "aerial photography of rice field",
+          "category": "master_plan_preview"
+        }
+      ],
+      "interiors": [
+        {
+          "url": "https://images.unsplash.com/photo-1649083048337-4aeb6dda80bb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBmYXJtaG91c2UlMjBpbnRlcmlvciUyMGxpdmluZyUyMHJvb218ZW58MHx8fHwxNzkzNjEyNDcyfDA&ixlib=rb-4.1.0&q=85",
+          "description": "Luxury living room interior",
+          "category": "gallery_interiors"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1773754371144-9dcb02249c33?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBmYXJtaG91c2UlMjBpbnRlcmlvcnxlbnwwfHx8fDE3OTM2MTI1NzJ8MA&ixlib=rb-4.1.0&q=85",
+          "description": "Living room with modern furniture and animal art",
+          "category": "gallery_interiors"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1775923293081-598283c494bc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBmYXJtaG91c2UlMjBpbnRlcmlvcnxlbnwwfHx8fDE3OTM2MTI1NzJ8MA&ixlib=rb-4.1.0&q=85",
+          "description": "Open window view of a swimming pool and tuscan landscape",
+          "category": "gallery_interiors"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1770941633927-b7a15557e0e1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBmYXJtaG91c2UlMjBpbnRlcmlvcnxlbnwwfHx8fDE3OTM2MTI1NzJ8MA&ixlib=rb-4.1.0&q=85",
+          "description": "Spacious bedroom with large bed and cozy seating area",
+          "category": "gallery_interiors"
+        }
+      ],
+      "landscaping": [
+        {
+          "url": "https://images.unsplash.com/photo-1750762286053-28632f48e717?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHw0fHx0cm9waWNhbCUyMGxhbmRzY2FwZWQlMjBnYXJkZW4lMjBwYWxtfGVufDB8fHx8MTc5MzYxMjQ3Mnww&ixlib=rb-4.1.0&q=85",
+          "description": "Lush tropical pathway",
+          "category": "lifestyle_section"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1792347255199-97c7a7cebda5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHx0cm9waWNhbCUyMGxhbmRzY2FwZWQlMjBnYXJkZW4lMjBwYWxtfGVufDB8fHx8MTc5MzYxMjU3Mnww&ixlib=rb-4.1.0&q=85",
+          "description": "A dirt path lined with stone walls and tall palm trees under a soft sky",
+          "category": "lifestyle_section"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1730660338791-8d63548efc75?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGxhbmRzY2FwZWQlMjBnYXJkZW4lMjBwYWxtfGVufDB8fHx8MTc5MzYxMjU3Mnww&ixlib=rb-4.1.0&q=85",
+          "description": "A tropical garden with palm trees and flowers",
+          "category": "lifestyle_section"
+        }
+      ],
+      "floor_plans": [
+        {
+          "url": "https://images.unsplash.com/photo-1786550860329-f813516e9705?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwyfHxhcmNoaXRlY3R1cmUlMjBmbG9vciUyMHBsYW4lMjAzZHxlbnwwfHx8fDE3OTM2MTI0NzJ8MA&ixlib=rb-4.1.0&q=85",
+          "description": "3D Architectural Floor plan",
+          "category": "design_catalogue"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1783990349147-906f62b882c1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwzfHxhcmNoaXRlY3R1cmUlMjBmbG9vciUyMHBsYW4lMjAzZHxlbnwwfHx8fDE3OTM2MTI1NzJ8MA&ixlib=rb-4.1.0&q=85",
+          "description": "Modern open-plan loft apartment with dining area and kitchen",
+          "category": "design_catalogue"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1770200574989-a4cca2c70c00?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmUlMjBmbG9vciUyMHBsYW4lMjAzZHxlbnwwfHx8fDE3OTM2MTI1NzJ8MA&ixlib=rb-4.1.0&q=85",
+          "description": "Architectural drawing of a modern office interior layout",
+          "category": "design_catalogue"
+        }
+      ],
+      "scenery_konkan": [
+        {
+          "url": "https://images.unsplash.com/photo-1766512775127-1463088dc2ad?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHxzZXJlbmUlMjB0cm9waWNhbCUyMGJhY2t3YXRlciUyMG5hdHVyZXxlbnwwfHx8fDE3OTM2MTI0NzJ8MA&ixlib=rb-4.1.0&q=85",
+          "description": "Serene tropical backwater nature",
+          "category": "lifestyle_background"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1772729134844-c4224e60edbf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwzfHxzZXJlbmUlMjB0cm9waWNhbCUyMGJhY2t3YXRlciUyMG5hdHVyZXxlbnwwfHx8fDE3OTM2MTI1NzJ8MA&ixlib=rb-4.1.0&q=85",
+          "description": "Palm trees line a tranquil river with boats in distance",
+          "category": "lifestyle_background"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1764012393303-157f358bd5fa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwyfHxzZXJlbmUlMjB0cm9waWNhbCUyMGJhY2t3YXRlciUyMG5hdHVyZXxlbnwwfHx8fDE3OTM2MTI1NzJ8MA&ixlib=rb-4.1.0&q=85",
+          "description": "A houseboat floats on a calm body of water",
+          "category": "lifestyle_background"
+        }
+      ]
+    }
+  },
+  "instructions_to_main_agent": [
+    "Build a 5-page React application using react-router-dom (.js/.jsx files ONLY).",
+    "Do NOT use TypeScript (.tsx / .ts).",
+    "Implement Lenis for smooth momentum scrolling.",
+    "Create Framer Motion variants for staggered reveals and line-by-line text masks.",
+    "Implement an Enquiry Form that parses inputs into a WhatsApp URL and opens it in a new tab (e.g., https://wa.me/...).",
+    "Develop a fully responsive Gallery with categorized tabs and a lightbox (prev/next capabilities) using Shadcn Dialog/Carousel components.",
+    "Use Lucide-React or Phosphor Icons for elegant line icons (Leaf, Map, Phone, Building).",
+    "Install and configure 'lucide-react', 'framer-motion', 'lenis' or '@studio-freight/react-lenis'.",
+    "Do NOT use transparent navigation backgrounds. Always use a blur effect or solid color for readability."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition (e.g., transition: all). Always add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container, i.e., do not add .App { text-align: center; } in the css file.",
+    "Always use modern button styles with interaction animations & color relevant to the app style.",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations separate good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories = main agent will use placeholder text which is FORBIDDEN.",
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Use `sonner` for toasts located in /app/src/components/ui/sonner.jsx (or similar js extension)."
+  ]
+}
